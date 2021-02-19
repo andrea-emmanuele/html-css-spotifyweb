@@ -1,0 +1,14 @@
+svg {
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+svg:hover {
+    color: #000;
+}
+
+svg.home {
+    background-image: url("../img/icons/home.svg");
+}

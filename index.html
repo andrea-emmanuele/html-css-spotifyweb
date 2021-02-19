@@ -1,26 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <title>Spotify</title>
+    <link rel="icon" href="./assets/img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <main>
-        <section role="top-bar"></section>
-        <section role="content"></section>
+        <nav>
+            <section class="main-navigation">
+                <a href="#">
+                    <img class="logo" src="./assets/img/logo.png" alt="logo">
+                    <img class="spotify menu-toggle" src="./assets/img/spotify.png" alt="spotify">
+                </a>
+                <section class="menu">
+                    <a class="active" href="#"><i class="fab fa-houzz"></i><span>Home</span></a>
+                    <a href="#"><i class="fas fa-search"></i><span>Cerca</span></a>
+                    <a href="#"><i class="fas fa-grip-horizontal"></i><span>La tua libreria</span></a>
+                </section>
+                <section class="playlist menu-toggle">
+                    <h5>playlist</h5>
+                </section>
+            </section>
+            <section class="profile">
+                <a href="#">
+                    <i class="fas fa-arrow-down fa-xs"></i>
+                    <span>Installa app</span>
+                </a>
+                <hr class="menu-toggle">
+                <div class="user">
+                    <div class="circle">
+                        <i class="far fa-user"></i>
+                    </div>
+                    <h6>Andrea Emmanuele</h6>
+                </div>
+            </section>
+        </nav>
+        <section role="main">
+            <section class="top-bar"></section>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, ullam!
+        </section>
     </main>
-    <aside>
-        <section class="logo"></section>
-        <nav></nav>
-        <section role="playlist"></section>
-        <section role="profile"></section>
-    </aside>
-    <footer role="controllers">
+    <section id="playing-now">
         <section class="song-preview"></section>
         <section class="play"></section>
         <section class="volume"></section>
-    </footer>
+    </section>
 </body>
 </html>
