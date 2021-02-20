@@ -29,16 +29,28 @@
                 </section>
                 <section class="playlist menu-toggle">
                     <h5>playlist</h5>
-                    <svg class="_28160026e8be14060f22ead8e2af36f5-scss" shape-rendering="crispEdges" viewBox="0 0 36 36">
-                        <path d="m28 20h-8v8h-4v-8h-8v-4h8v-8h4v8h8v4z"></path>
-                    </svg>
+                    <div class="add-playlist">
+                        <a href="#">
+                            <div class="add">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 64 64"><path fill="#000" d="M38 26V2H26v24H2v12h24v24h12V38h24V26z"/></svg>                            </div>
+                            <span>Crea Playlist</span>
+                        </a>
+                    </div>
+                    <ul class="my_playlists">
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                    </ul>
                 </section>
             </section>
             <section class="profile">
-                <div class="download">
+                <section class="download">
                     <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                             aria-hidden="true" focusable="false" width="1em" height="1em"
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false" width="1em" height="1em"
                              style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
                              preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
                             <g fill="none">
@@ -49,21 +61,115 @@
                         </svg>
                         <span>Installa app</span>
                      </a>
-                </div>
+                </section>
                 <hr class="menu-toggle">
-                <div class="user">
+                <section class="user">
                     <a href="#">
                         <div class="circle">
-                            <i class="far fa-user"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M228.475 213.99a116.527 116.527 0 0 0-74.734-55.065a68 68 0 1 0-51.482 0a116.526 116.526 0 0 0-74.732 55.062a4 4 0 1 0 6.925 4.007a108.037 108.037 0 0 1 187.098.002a4 4 0 0 0 6.925-4.006zM68 96a60 60 0 1 1 60 60a60.068 60.068 0 0 1-60-60z" fill="#fff"/>
+                            </svg>
                         </div>
-                        <h5>Jeff Bezos</h5>
                     </a>
-                </div>
+                    <h5>Jeff Bezos</h5>
+                </section>
             </section>
         </nav>
         <section role="main">
-            <section class="top-bar"></section>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, ullam!
+            <section class="top-bar">
+                <button class="upgrade">effettua l'upgrade</button>
+            </section>
+            <section class="inner-content">
+                <nav>
+                    <a class="active" href="#">in evidenza</a>
+                    <a href="#">podcast</a>
+                    <a href="#">classifiche</a>
+                    <a href="#">generi e mood</a>
+                    <a href="#">nuove uscite</a>
+                    <a href="#">scopri</a>
+                </nav>
+                <div class="recently-played">
+                    <h2>Recently played</h2>
+                    <div class="card">
+                        <div class="preview-group">
+                            <img src="./assets/img/lil-tjay/calling-my-phone.jpg" alt="Calling My Phone">
+                            <img src="./assets/img/lil-tjay/fade-away.jpg" alt="Fade Away">
+                            <img src="./assets/img/lil-tjay/true-myself.jpg" alt="True MySelf">
+                            <img src="./assets/img/lil-tjay/losses.jpg" alt="Losses">
+                        </div>
+                        <h4>Song Title</h4>
+                        <p>Artist</p>
+                    </div>
+                    <div class="card">
+                        <div class="preview">
+                            <img src="./assets/img/rockstar.jpg" alt="Rockstar">
+                        </div>
+                        <h4>Song Title</h4>
+                        <p>Artist</p>
+                    </div>
+                    <div class="card">
+                        <div class="preview">
+                            <img src="./assets/img/transmission.jpg" alt="transmission">
+                        </div>
+                        <h4>Song Title</h4>
+                        <p>Artist</p>
+                    </div>
+                    <div class="card">
+                        <div class="preview">
+                            <img src="./assets/img/alive.jpg" alt="Alive">
+                        </div>
+                        <h4>Song Title</h4>
+                        <p>Artist</p>
+                    </div>
+                    <div class="card">
+                        <div class="preview">
+                            <img src="./assets/img/ride.jpg" alt="Ride">
+                        </div>
+                        <h4>Song Title</h4>
+                        <p>Artist</p>
+                    </div>
+                    <div class="card start">
+                        <div class="preview">
+                            <img src="./assets/img/weeknd.jpg" alt="The Weeknd">
+                        </div>
+                        <h4>Song Title</h4>
+                        <p>Artist</p>
+                    </div>
+                </div>
+                <div class="created-for">
+                    <h2>Creato per Jeff Bezos</h2>
+                    <p class="subtitle">Pi&ugrave; ascolti, pi&ugrave; accurati saranno i suggerimenti.</p>
+                    <div class="card">
+                        <div class="preview">
+                            <img src="./assets/img/ultra-gaming.jpg" alt="Ultra Gaming">
+                            <span>Title</span>
+                        </div>
+                        <h4>Title</h4>
+                    </div>
+                    <div class="card">
+                        <div class="preview">
+                            <img src="./assets/img/trends.jpg" alt="Trends">
+                            <span>Title</span>
+                        </div>
+                        <h4>Title</h4>
+                    </div>
+                </div>
+                <div class="popular-artists">
+                    <h2>Popular Artists</h2>
+                    <p class="subtitle">Pi&ugrave; ascolti, pi&ugrave; accurati saranno i suggerimenti.</p>
+                    <div class="card">
+                        <div class="preview rounded">
+                            <img src="./assets/img/joseph-capriati.jpg" alt="Joseph Capriati">
+                        </div>
+                        <h4>Artist Name</h4>
+                    </div>
+                    <div class="card">
+                        <div class="preview rounded">
+                            <img src="./assets/img/ben-klock.jpg" alt="Ben Klock">
+                        </div>
+                        <h4>Artist Name</h4>
+                    </div>
+                </div>
+            </section>
         </section>
     </main>
     <section id="playing-now">
