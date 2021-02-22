@@ -280,6 +280,33 @@ section#playing-now button {
     cursor: pointer;
 }
 
+section#playing-now input[type="range"] {
+    -webkit-appearance: none;
+    outline: none;
+    min-width: 90px;
+    width: 60%;
+    height: 4px;
+    background: #5A5A5A;
+    border-radius: 3px;
+    margin-right: 3px;
+    margin-left: 3px;
+    cursor: pointer;
+}
+
+section#playing-now input[type="range"]::-webkit-slider-thumb,
+section#playing-now input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    width: 1px;
+    height: 1px;
+    visibility: hidden;
+}
+
+section#playing-now input[type="range"]::-moz-range-progress {
+    height: 100%;
+    background: #C1C1C1;
+    border-radius: 3px;
+}
+
 /*region song-preview*/
 
 .song-preview {
@@ -351,6 +378,7 @@ section#playing-now button {
     min-width: 120px;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 5px;
 }
 
 .player .player-controls > button[name="play"] {
@@ -370,14 +398,6 @@ section#playing-now button {
     font-size: .5rem;
 }
 
-.player .player-progress > input[type="range"] {
-    min-width: 90px;
-    width: 60%;
-    margin-right: 3px;
-    margin-left: 3px;
-    cursor: pointer;
-}
-
 /*endregion*/
 
 /*region volume*/
@@ -386,7 +406,16 @@ section#playing-now button {
     flex: 0 1 120px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.volume > button {
+    height: 13px;
+}
+
+.volume > input[type="range"] {
+    width: 40% !important;
+    min-width: 40px !important;
 }
 
 /*endregion*/
@@ -574,6 +603,56 @@ section#playing-now button {
 
     /*endregion*/
 
+    /*region playing now*/
+
+    /*region song preview*/
+
+    .song-preview {
+        flex: 0 1 170px;
+    }
+
+    .song-preview > .info {
+        width: 99px;
+    }
+
+    .song-preview .info > img {
+        height: 45px;
+    }
+
+    .song-preview > .favorites {
+        width: 45px;
+    }
+
+    /*endregion*/
+
+    /*region player*/
+
+    .player > .player-controls {
+        min-width: 170px;
+    }
+
+    /*endregion*/
+    
+    /*region volume*/
+    
+    .volume {
+        flex: 0 1 170px;
+    }
+
+    .volume > button {
+        font-size: 1rem;
+        height: 14px;
+    }
+
+    .volume > input[type="range"] {
+        width: 50% !important;
+        min-width: 40px !important;
+    }
+    
+    /*endregion*/
+
+    /*endregion*/
+
     /*endregion*/
 }
 
@@ -616,14 +695,15 @@ section#playing-now button {
 
     /*region playing now*/
 
-    /*region song preview*/
+    /*region player*/
 
-    .song-preview {
-        width: 155px;
+    .player .player-controls > button {
+        font-size: 1.2rem;
     }
 
-    .song-preview .favorites > svg:last-of-type {
-        margin-left: 5px;
+    .player .player-controls > button[name="play"] {
+        font-size: 1.7rem;
+        margin: 0 10px
     }
 
     /*endregion*/
