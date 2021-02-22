@@ -270,49 +270,64 @@ section#playing-now {
     color: #fff;
     background: #282828;
     display: flex;
+    /*justify-content: space-between;*/
+}
+
+section#playing-now button {
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 /*region song-preview*/
 
 .song-preview {
+    flex: 0 1 120px;
     height: 100%;
-    flex: 0 1 230px;
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 .song-preview > .info {
+    width: 75px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
 .song-preview .info > img {
-    height: 35px;
+    height: 25px;
     width: auto;
-    margin-left: 8px;
-    margin-right: 8px;
+}
+
+.song-preview .info .inner-info {
+    display: flex;
+    flex-direction: column;
 }
 
 .song-preview .info .inner-info > a {
+    font-size: .65rem;
     color: #fff;
     text-decoration: none;
 }
 
 .song-preview .info .inner-sub-info {
-    width: 52px;
+    width: 45px;
     color: #808080;
     display: flex;
     justify-content: space-between;
-    margin-right: 15px;
 }
 
 .song-preview .info .inner-sub-info > a {
-    font-size: .6rem;
+    font-size: .5rem;
     color: #808080;
     text-decoration: none;
 }
 
 .song-preview .favorites {
+    width: 13px;
     color: #808080;
     display: flex;
     justify-content: space-around;
@@ -321,10 +336,46 @@ section#playing-now {
 
 /*endregion*/
 
-/*region play*/
+/*region player*/
 
-.play {
-    flex: 1 100%;
+.player {
+    flex: 1 0 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.player > .player-controls {
+    font-size: 1rem;
+    min-width: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.player .player-controls > button[name="play"] {
+    font-size: 1.2rem;
+    margin: 0 7px;
+}
+
+.player > .player-progress {
+    min-width: 120px;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player > .player-progress > span {
+    font-size: .5rem;
+}
+
+.player .player-progress > input[type="range"] {
+    min-width: 90px;
+    width: 60%;
+    margin-right: 3px;
+    margin-left: 3px;
+    cursor: pointer;
 }
 
 /*endregion*/
@@ -332,7 +383,10 @@ section#playing-now {
 /*region volume*/
 
 .volume {
-    flex: 0 1 200px;
+    flex: 0 1 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /*endregion*/
@@ -565,7 +619,7 @@ section#playing-now {
     /*region song preview*/
 
     .song-preview {
-        flex: 0 1 245px;
+        width: 155px;
     }
 
     .song-preview .favorites > svg:last-of-type {
