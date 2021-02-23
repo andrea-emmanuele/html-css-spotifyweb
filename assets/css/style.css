@@ -126,6 +126,23 @@ section[role="main"] {
     overflow-y: auto;
 }
 
+section[role="main"]::-webkit-scrollbar {
+    width: 10px;
+}
+
+section[role="main"]::-webkit-scrollbar-track {
+    background: #5A5A5A;
+}
+
+section[role="main"]::-webkit-scrollbar-thumb {
+    background: rgba(193, 193, 193, .5);
+    border-radius: 4px;
+}
+
+section[role="main"]::-webkit-scrollbar-thumb:hover {
+    background: rgb(193, 193, 193);
+}
+
 /*region top bar*/
 
 .top-bar {
@@ -376,7 +393,7 @@ section#playing-now input[type="range"]::-moz-range-thumb {
 
 .progress {
     height: 4px;
-    background: #fff;
+    background: #C1C1C1;
     border-radius: 3px;
 }
 
@@ -385,7 +402,7 @@ input[type="range"]:hover::-webkit-slider-thumb {
 }
 
 input[type="range"]:hover::-moz-range-thumb {
-    visibility: visible;
+    visibility: visible !important;
 }
 
 input[type="range"]:hover + .progress {
@@ -584,6 +601,7 @@ input[type="range"]:hover + .progress {
     }
 
     .menu > a > span {
+        height: 12px;
         margin-left: 5px;
         display: block;
     }
@@ -633,6 +651,7 @@ input[type="range"]:hover + .progress {
     }
 
     .playlist > .add-playlist span {
+        height: 14px;
         font-size: .9rem;
         margin-left: 10px;
     }
