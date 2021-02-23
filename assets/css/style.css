@@ -315,7 +315,6 @@ section#playing-now {
     color: #fff;
     background: #282828;
     display: flex;
-    /*justify-content: space-between;*/
 }
 
 section#playing-now button {
@@ -325,54 +324,22 @@ section#playing-now button {
     cursor: pointer;
 }
 
-/*section#playing-now input[type="range"] {
-    -webkit-appearance: none;
-    outline: none;
-    min-width: 90px;
-    width: 60%;
-    height: 4px;
-    background: #5A5A5A;
-    border-radius: 3px;
-    margin-right: 3px;
-    margin-left: 3px;
-    cursor: pointer;
-}
-
-section#playing-now input[type="range"]::-webkit-slider-thumb,
-section#playing-now input[type="range"]::-moz-range-thumb {
-    -webkit-appearance: none;
-    border: none;
-    visibility: hidden;
-}
-
-section#playing-now input[type="range"]::-moz-range-progress {
-    height: 100%;
-    background: #C1C1C1;
-    border-radius: 3px;
-}
-
-section#playing-now input[type="range"]:hover::-moz-range-progress {
-    background: #B4EC55;
-}
-
-section#playing-now input[type="range"]:hover::-webkit-slider-thumb,
-section#playing-now input[type="range"]:hover::-moz-range-thumb {
-    visibility: visible;
-    width: 10px;
-    height: 10px;
-}*/
-
 /*region progress bar*/
 
 .range {
     position: relative;
     height: 4px;
-    min-width: 50px;
-    width: 60%;
+    min-width: 40px;
+    width: 40%;
     background: #5A5A5A;
     border-radius: 3px;
     margin-right: 6px;
     margin-left: 3px;
+}
+
+#main {
+    min-width: 80px;
+    width: 70%;
 }
 
 input[type="range"] {
@@ -388,8 +355,7 @@ input[type="range"] {
     z-index: 1;
 }
 
-section#playing-now input[type="range"]::-webkit-slider-thumb,
-section#playing-now input[type="range"]::-moz-range-thumb {
+input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 10px;
     height: 10px;
@@ -398,9 +364,19 @@ section#playing-now input[type="range"]::-moz-range-thumb {
     visibility: hidden;
 }
 
+section#playing-now input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    visibility: hidden;
+}
+
 .progress {
     height: 4px;
-    background: #C1C1C1;
+    background: #fff;
     border-radius: 3px;
 }
 
@@ -408,10 +384,13 @@ input[type="range"]:hover::-webkit-slider-thumb {
     visibility: visible;
 }
 
+input[type="range"]:hover::-moz-range-thumb {
+    visibility: visible;
+}
+
 input[type="range"]:hover + .progress {
     background: #B4EC55;
 }
-
 /*endregion*/
 
 /*region song-preview*/
@@ -515,6 +494,7 @@ input[type="range"]:hover + .progress {
 }
 
 .player > .player-progress > span {
+    width: 20px;
     font-size: .5rem;
 }
 

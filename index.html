@@ -232,12 +232,12 @@
                 </button>
             </div>
             <div class="player-progress">
-                <span>0.25</span>
-                <div class="range">
-                    <input name="range" type="range" min="0" max="100" step="1" value="50">
-                    <div class="progress"></div>
+                <span id="current-point"></span>
+                <div id="main" class="range">
+                    <input id="duration" type="range" min="0" max="4.25" step="0.01" value="0.25">
+                    <div id="duration-progress" class="progress"></div>
                 </div>
-                <span>4.35</span>
+                <span id="song-length"></span>
             </div>
         </section>
         <section class="volume">
@@ -251,23 +251,35 @@
                 <svg xmlns="http://www.w3.org/2000/svg" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="CurrentColor"><path d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"/><path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z"/><path d="M8.707 11.182A4.486 4.486 0 0 0 10.025 8a4.486 4.486 0 0 0-1.318-3.182L8 5.525A3.489 3.489 0 0 1 9.025 8A3.49 3.49 0 0 1 8 10.475l.707.707zM6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06z"/></g></svg>
             </button>
             <div class="range">
-                <input id="range" type="range" min="0" max="100" step="1" value="50">
-                <div id="progress" class="progress"></div>
+                <input id="volume" type="range" min="0" max="100" step="1" value="50">
+                <div id="volume-progress" class="progress"></div>
             </div>
         </section>
     </section>
-
+    <!--progress bars-->
     <script>
-        let progress_bar = document.getElementsByName("range");
-        let val = document.getElementsByClassName("progress");
+        let duration = document.getElementById("duration");
+        let duration_value = document.getElementById("duration-progress");
+        let current_point = document.getElementById("current-point");
+        let song_length = document.getElementById("song-length");
 
-        let prova = document.getElementById("prova");
+        let volume = document.getElementById("volume");
+        let vol_value = document.getElementById("volume-progress");
 
-        val.style.width = 100 / (progress_bar.max / progress_bar.value) + "%";
+        current_point.innerHTML = duration.value;
+        song_length.innerHTML = duration.max;
 
-        progress_bar.oninput = function (){
-            val.style.width = 100 / (progress_bar.max / progress_bar.value) + "%";
-            prova.innerHTML = this.value;
+        duration_value.style.width = 100 / (duration.max / duration.value) + "%";
+
+        duration.oninput = function (){
+            duration_value.style.width = 100 / (duration.max / duration.value) + "%";
+            current_point.innerHTML = this.value;
+        }
+
+        vol_value.style.width = volume.value + "%";
+
+        volume.oninput = function (){
+            vol_value.style.width = this.value + "%";
         }
     </script>
 </body>
