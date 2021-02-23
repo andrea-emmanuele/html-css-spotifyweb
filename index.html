@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <title>Spotify</title>
+    <title>Spotify - Music is for everyone</title>
     <link rel="icon" href="./assets/img/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -273,7 +273,7 @@
 
         duration.oninput = function (){
             duration_value.style.width = 100 / (duration.max / duration.value) + "%";
-            current_point.innerHTML = this.value;
+            current_point.innerHTML = (Math.round(this.value * 100) / 100).toFixed(2);
         }
 
         vol_value.style.width = volume.value + "%";
